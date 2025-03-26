@@ -1,0 +1,71 @@
+version: "3"
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mailcatcher-data:
+    driver: local
+  var:
+    driver: local
+  vendor:
+    driver: local
+  node_modules:
+    driver: local
+  mysql-data:
+    driver: local
+
+services:
+
+  ### ECCube4 ##################################
+  ec-cube:
+    image: ${REGISTRY:-ghcr.io}/${IMAGE_NAME:-ec-cube/ec-cube-php}:${TAG:-8.1-apache}
+    ports:
+      - 8080:80
+      - 4430:443
+    volumes:
+      - "var:/var/www/html/var"
+      - "vendor:/var/www/html/vendor"
+      - "node_modules:/var/www/html/node_modules"
+    environment:
+      # EC-CUBE environments
+      APP_ENV: prod
+      APP_DEBUG: 1
+      DATABASE_URL: "mysql://eccube_user:password@mysql:3306/eccube"
+      DATABASE_SERVER_VERSION: 3
+      DATABASE_CHARSET: 'utf8'
+      MAILER_DSN: "smtp://mailcatcher:1025"
+      ECCUBE_AUTH_MAGIC: "<change.me>"
+      ECCUBE_INSTALL: "false"  # インストール処理を防止
+    depends_on:
+      - mysql
+    networks:
+      - backend
+    restart: always
+      
+
+  ### MySQL ##################################
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: eccube_user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - backend
+    volumes:
+      - mysql-data:/var/lib/mysql  # ボリュームの確認
+    restart: always
+
+  ### Mailcatcher ##################################
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    networks:
+      - backend
+    restart: always

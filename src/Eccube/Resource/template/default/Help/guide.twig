@@ -1,0 +1,99 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% extends 'default_frame.twig' %}
+
+{% block main %}
+    <div class="ec-role">
+        <div class="ec-pageHeader">
+            <h1>{{ 'front.guide.title'|trans }}</h1>
+        </div>
+        <div class="ec-off1Grid">
+            <div class="ec-off1Grid__cell">
+                <div class="ec-borderedDefs">
+                    <dl>
+                        <dt>
+                            <h4>
+                            <span style="border-left: 4px solid; padding-left: 10px;" >レンタルについて</span>
+                            </h4>
+                            <img src="{{ asset('/html/template/default/assets/img/top/rental.png') }}" style="width: 80px; height: auto;">
+                        </dt>
+                        <dd>
+                            プチプラタウンは、オープンしたばかりのドレスレンタルショップです。</br>
+                            結婚式の参列や二次会、パーティーはもちろん、お食事会など多彩なシーンでご利用いただけます。
+                            すべてのレンタル商品は、<span style="color: red;">往復送料無料</span>。レンタル期間と料金は、<span style="color: red;">10泊同一料金</span>で、90日前から予約が可能です。
+                            試着サービスは実施しておりませんので、ご了承ください。10泊以上のご利用には、1日あたり550円（税込）の延長料金が発生します。
+                            また、レンタルサービスの性質上、<span style="color: red;">返品や交換はできません</span>ので、予めご了承の上ご利用ください。
+                            <br><br>
+                            当店では、<span style="color: red;">土・日のまとめて発送</span>を活用し、コストを抑えることで、お得なレンタル価格をご提供しています。
+                            例えば、「土曜日」にドレスが必要な場合、前週の土曜日または日曜日に発送し、平日にお届けします。
+                            「土曜日の本番」に届いたドレスを着用いただき、その翌週の平日に返却発送が可能です。
+                        </dd>
+                    </dl>
+                </div>
+                <div class="ec-borderedDefs">
+                    <dl>
+                        <dt>
+                            <h4>
+                            <span style="border-left: 4px solid; padding-left: 10px;">レンタルの流れ</span>
+                            </h4>
+                        </dt>
+                        <dd>
+                            <dl>
+                                <dt>
+                                    <label class="ec-label">1 ご注文</label>
+                                    <img src="{{ asset('/html/template/default/assets/img/top/cart.jpg') }}" style="width: 80px; height: auto;">
+                                </dt>
+                                <dd>
+                                    「商品をカートに入れる」より、ご希望のアイテムをお選びください。
+                                    レンタル状況は各商品ページのカレンダーでご確認いただけます。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label class="ec-label">2 お届け</label>
+                                    <img src="{{ asset('/html/template/default/assets/img/top/present.jpg') }}" style="width: 80px; height: auto;">
+                                </dt>
+                                <dd>
+                                    ヤマト運輸にて、ご指定の住所へお届けいたします（時間指定可能）。
+                                    配送には地域によって2〜3日かかる場合があります。
+                                    ご自宅以外への配送手配も承ります。
+                                    ご注文当日の3日後が最短のお届け日指定となります。
+                                    お届け地域によっては4日後からのご指定となります。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label class="ec-label">3 ご利用</label>
+                                    <img src="{{ asset('/html/template/default/assets/img/top/dress.jpg') }}" style="width: 80px; height: auto;">
+                                </dt>
+                                <dd>
+                                    お気に入りのドレスとともに、特別なひとときをお楽しみください。
+                                    通常のご使用による若干の汚れ等は、当社にて商品状態を改善できるため、お客様の費用負担はありません。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label class="ec-label">4 ご返却</label>
+                                    <img src="{{ asset('/html/template/default/assets/img/top/track.jpg') }}" style="width: 80px; height: auto;">
+                                </dt>
+                                <dd>
+                                    クリーニングの手配は必要ありません。
+                                    お手元に届いたケースに商品をお入れいただき、ヤマト運輸にてご返送ください。
+                                    返却期限内に発送手続きを完了していただきますようお願いいたします。
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

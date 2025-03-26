@@ -1,0 +1,275 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* Help/privacy.twig */
+class __TwigTemplate_8cdf9f22fa1598ba7f2123583c63e6c1 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'main' => [$this, 'block_main'],
+        ];
+        $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
+        $this->checkSecurity();
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 11
+        return "default_frame.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__eccube__gblobal = $this->env->getGlobals();
+        $__eccube__eventDispatcher = $__eccube__gblobal['event_dispatcher'];
+        $__eccube__source = $this->env->getLoader()->getSourceContext($this->getTemplateName())->getCode();
+        $__eccube__event = new \Eccube\Event\TemplateEvent($this->getTemplateName(), $__eccube__source, $context);
+        $__eccube__eventDispatcher->dispatch($__eccube__event, $this->getTemplateName());
+        $context = $__eccube__event->getParameters();
+        if ($__eccube__event->getSource() !== $__eccube__source) {
+            $__eccube__newTemplate = $this->env->createTemplate($__eccube__event->getSource());
+            $__eccube__newTemplate->display($__eccube__event->getParameters());
+            return;
+        }
+
+        $this->parent = $this->loadTemplate("default_frame.twig", "Help/privacy.twig", 11);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 13
+    public function block_main($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 14
+        echo "    <div class=\"ec-role\">
+        <div class=\"ec-pageHeader\">
+            <h1>";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("プライバシーポリシー"), "html", null, true);
+        echo "</h1>
+        </div>
+        <div class=\"ec-off1Grid\">
+           <div class=\"ec-off1Grid__cell\">
+              <div class=\"ec-heading-bold\">1. はじめに</div>
+
+                <p>プチプラタウン（以下「当ショップ」といいます）は、お客様が当ショップをご利用するにあたり、個人情報（個人情報の保護に関する法律（以下「個人情報保護法」といいます。）2条1項により定義されるものを指します。）その他お客様個人に関する情報（以下「お客様情報」といいます。）を取得することがあります。</p>
+
+                <p>当ショップは、お客様情報の取扱いにあたり個人情報保護法その他関連法令及びガイドライン並びに下記にて当ショップが定めるプライバシーポリシー（以下「本プライバシーポリシー」といいます。）を遵守するものとします。</p>
+            </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+           <div class=\"ec-off1Grid__cell\">
+             <div class=\"ec-heading-bold\">2. 適用対象</div>
+
+               <p>本プライバシーポリシーは、お客様が当ショップをご利用するにあたり当ショップが取得する全てのお客様情報を対象とします。</p>
+           </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+            <div class=\"ec-off1Grid__cell\">
+              <div class=\"ec-heading-bold\">3. 当ショップが取得するお客様情報</div>
+                <p>当ショップは、以下のお客様情報を、当ショップに関するサービス上でお客様自身が直接入力する方法により取得します。</p>
+  
+                <p>・お客様による商品の購入等に際して取得する情報</p>
+                <p>・お客様の氏名、住所、職業等の基本的情報</p>
+                <p>・お客様の電話番号、メールアドレス等連絡先に関する情報</p>
+                <p>・その他お客様及びお客様による商品の購入等に関する情報</p>
+                <p>・お客様による当ショップの利用に際して取得するその他の情報</p>
+                <p>・お客様が購入した商品等、当ショップの利用に関する情報</p>
+                <p>・お客様の当ショップ上での決済状況に関する情報</p>
+                <p>・お客様が当ショップを利用する際のクッキー、IPアドレス、端末の種類、携帯端末識別子、ブラウザの種類、ブラウザの言語、参照元URL、プラットフォームの種類、ページ閲覧数、ページ閲覧時間及び当ショップのアプリ又はウェブサイトにおけるアクティビティを行った日時</p>
+                <p>・その他お客様による当ショップの利用に関する情報</p>
+            </div>
+        </div>
+         <div class=\"ec-off1Grid\">
+           <div class=\"ec-off1Grid__cell\">
+             <div class=\"ec-heading-bold\">4. 利用目的</div>
+
+               <p>当ショップは、3.に記載したお客様情報を以下の目的に利用します。</p>
+
+                <p>・お客様に対する当ショップに関するサービスの提供等</p>
+                <p>・当ショップを利用した商品等の購入等を確認するため</p>
+                <p>・当ショップに関する支払いの確認のため</p>
+                <p>・その他お客様に当ショップに関するサービスを提供するため</p>
+                <p>・当ショップに関するサービスの改善及び新サービスの立案等</p>
+                <p>・当ショップの利用状況・利用態様等に関する調査・分析のため</p>
+                <p>・新サービスの企画立案・研究開発のため</p>
+                <p>・その他当ショップのサービスの品質向上のため</p>
+                <p>・当ショップに関するサービスに関する案内、お客様からの問い合わせ等への対応等</p>
+                <p>・当ショップに関するサービスに係る連絡や情報提供を行うため</p>
+                <p>・電子メール配信サービスの申し込みの確認やメールを配信するため</p>
+                <p>・キャンペーンの案内のため</p>
+                <p>・新商品、新サービス等の案内に利用するため</p>
+                <p>・利用規約の変更等当ショップに関するサービスに係る重大な変更をお知らせするため</p>
+                <p>・お客様による問い合わせへの対応のため</p>
+                <p>・その他当ショップの利用に関してお客様と適切な連絡を行うため</p>
+                <p>・管理運営等</p>
+                <p>・お客様の当ショップに関するサービスの利用状況や登録情報の確認のため</p>
+                <p>・お客様による規約の遵守状況の確認のため<p>
+                <p>・規約違反が疑われる又は規約違反が認められたお客様への対応その他当ショップ運営上のトラブルの解決のため</p>
+                <p>・その他お客様による安全な利用の確保及び当ショップに関するサービスの品質の保持に必要な措置を実施するため</p>
+            </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+              <div class=\"ec-heading-bold\">5. お客様情報の第三者への預託、提供について</div>
+
+                <p>当ショップは、以下のような場合において、お客様情報を第三者に提供、預託することがあります。なお、かかる場合において、当ショップは、必要に応じて、当該提供先について、当ショップが定める基準を満たす者であるか審査を行い、当ショップの適切な監督のもと、お客様情報を預託、提供し、契約に際してはお客様情報が適正に管理されるように契約内容に配慮します。</p>
+
+                <p>・業務委託先への預託・提供</p>
+                <p>お客様情報の処理、お客様の情報等、業務の全部又は一部を他の企業に委託する場合</p>
+
+                <p>・法令等に基づく提供</p>
+                <p>法令等に基づき、裁判所、行政機関、監督官庁その他の公的機関からお客様情報を提供するよう求められた場合</p>
+              </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">6. 管理</div>
+
+              <p>当ショップでは、お客様情報の紛失、破壊、改ざん並びに不正アクセス及び漏えい等が起きないように、お客様情報について厳重に管理を行います。なお、5.のとおり、当ショップでは、個人情報の取扱いを他の企業等に委託する場合がありますが、この場合当ショップは当該企業に対して適切な監督を行うものとします。</p>
+            </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">7. Google アナリティクス及びクッキーの利用について</div>
+
+                <p>・Google アナリティクスの利用</p>
+                <p>当ショップに関するサービスではお客様による利用状況・利用態様を調査・分析するためにGoogle アナリティクスを利用しています。Google アナリティクスの利用により収集されたデータは、Google社のプライバシーポリシーに基づいて管理されています。Google アナリティクスの詳細及びオプトアウト手続については、「Google アナリティクス利用規約」「Google のサービスを使用するサイトやアプリから収集した情報の Google による使用」をご確認ください。</p>
+
+                <p>・クッキーの利用について</p>
+                <p>当ショップに関するサービスでは、利便性向上や統計データ分析並びに広告の配信、表示及び効果測定等の目的でクッキー（Cookie）及びこれに類似する技術を利用することがあります。</p>
+
+                <p>クッキーとは、お客様が当ショップに関するサービスにアクセスした際にご利用のデバイス上に保存されるテキストデータです。</p>
+
+                <p>お客様は、ブラウザの設定等により、お客様の判断でクッキーの受け入れの制限又は拒否を行うことができますが、このような選択をした場合、当ショップに関するサービスを正常にご利用いただけなくなる可能性があります。</p>
+            </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">8. 当ショップによるお客様情報の訂正について</div>
+              <p>お客様情報のうち、市町村等の名称及び郵便番号並びに金融機関の名称等、請求や支払いを行う上で支障がある情報に変更があった場合には、当ショップが登録されているお客様情報を変更させていただく場合があります。</p>
+          </div>
+       </div>
+       <div class=\"ec-off1Grid\">
+         <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">9. お客様によるお客様情報の確認・訂正、保有個人データの開示等</div>
+               <p>お客様は、お客様情報の取扱いに関し、以下の対応を行うことができます。</p>
+               <p>・お客様情報の確認・訂正</p>
+               <p>お客様はいつでもお客様がご登録したお客様情報の確認・訂正を行うことができます。</p>
+               <p>・保有個人データの開示</p>
+               <p>当ショップは、お客様から保有個人データ又は第三者提供に係る記録の開示の請求があった場合には、次の場合を除き、遅滞なく開示します。</p>
+               <p>開示することで本人又は第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</p>
+               <p>開示することで当ショップの業務の適正な実施に著しい支障を及ぼすおそれがある場合</p>
+               <p>開示することが法令に違反することとなる場合</p>
+               <p>・保有個人データの訂正等</p>
+               <p>当ショップは、お客様から保有個人データの訂正、追加、削除、消去、利用停止、第三者提供の停止等に関する請求があった場合には、当該請求がお客様本人又は本人から適切な授権を受けた代理人によるものであること、及び、当該請求が関連する法令上の要件を充足することについて調査・確認の上、法令に従い対応します。なお、技術的な制限等により、お客様の要望に直接的にはお応えできない場合がありますので、あらかじめご了承ください。</p>
+           </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">10. 免責・注意事項について</div>
+                <p>・他の事業者等のウェブサイトの利用について</p>
+                <p>当ショップは、他の事業者又は個人のウェブサイト（当ショップに関するサービスの提供に際して当ショップが用いるウェブサイトからのリンクにより遷移するウェブサイトを含みます。）におけるお客様の個人情報等の保護について、責任を負うものではありません。お客様ご自身にて当該ウェブサイトの内容をよくご確認の上ご利用ください。</p>
+
+                <p>・本人を確認するための情報について</p>
+                <p>お客様本人を確認するための情報につきましては、お客様にて、紛失、忘失及び第三者への漏洩がないよう厳重な管理をお願いします。</p>
+            </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+            <div class=\"ec-off1Grid__cell\">
+              <div class=\"ec-heading-bold\">11. プライバシーポリシーの変更及び最新のプライバシーポリシーの確認について</div>
+
+                 <p>当ショップは本プライバシーポリシーについて、適宜その内容を変更します。</p>
+
+                 <p>お客様におかれましては、当ショップに関するサービスのご利用に際して、必ず最新のプライバシーポリシーをご確認ください。</p>
+
+                 <p>当ショップは、本プライバシーポリシーを変更する場合には、お客様に本プライバシーポリシーを変更する旨及び変更後の内容並びにその効力発生日を通知又は周知するものとします。なお、本プライバシーポリシーの変更に際して、法令上お客様の同意が必要となる場合において、当ショップは本プライバシーポリシーの変更についてお客様の同意（当該変更内容の通知又は周知後、お客様が当ショップを利用した場合又は当ショップの定める期間内に登録取消等の手続をとらなかったときには、お客様が変更後の本プライバシーポリシーが適用されることに同意したものとみなすことを含みます。）を取得します。</p>
+           </div>
+        </div>
+        <div class=\"ec-off1Grid\">
+          <div class=\"ec-off1Grid__cell\">
+            <div class=\"ec-heading-bold\">12. 当ショップに係る情報及び各種問い合わせ先</div>
+              <p>本プライバシーポリシーに関する当ショップへのお問い合わせ並びに、本プライバシーポリシー及び個人情報保護法に基づく当ショップに対する各種請求については、当ショップのお問い合わせフォーム よりご連絡ください。</p>
+          </div>
+      </div>
+    </div>
+";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName()
+    {
+        return "Help/privacy.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo()
+    {
+        return array (  68 => 16,  64 => 14,  60 => 13,  37 => 11,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "Help/privacy.twig", "/home/manabu/work/2025/02/28/ec-cube/src/Eccube/Resource/template/default/Help/privacy.twig");
+    }
+    
+    public function checkSecurity()
+    {
+        static $tags = array();
+        static $filters = array("escape" => 16, "trans" => 16);
+        static $functions = array();
+
+        try {
+            $this->sandbox->checkSecurity(
+                [],
+                ['escape', 'trans'],
+                []
+            );
+        } catch (SecurityError $e) {
+            $e->setSourceContext($this->source);
+
+            if ($e instanceof SecurityNotAllowedTagError && isset($tags[$e->getTagName()])) {
+                $e->setTemplateLine($tags[$e->getTagName()]);
+            } elseif ($e instanceof SecurityNotAllowedFilterError && isset($filters[$e->getFilterName()])) {
+                $e->setTemplateLine($filters[$e->getFilterName()]);
+            } elseif ($e instanceof SecurityNotAllowedFunctionError && isset($functions[$e->getFunctionName()])) {
+                $e->setTemplateLine($functions[$e->getFunctionName()]);
+            }
+
+            throw $e;
+        }
+
+    }
+}
