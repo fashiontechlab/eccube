@@ -74,3 +74,16 @@ RUN find ${APACHE_DOCUMENT_ROOT} \( -path ${APACHE_DOCUMENT_ROOT}/vendor -prune 
   ;
 
 HEALTHCHECK --interval=10s --timeout=5s --retries=30 CMD pgrep apache
+
+
+# Jenkins LTS イメージをベースにする
+FROM jenkins/jenkins:lts
+
+# root ユーザーに切り替え
+USER root
+
+# Maven のインストール
+RUN apt-get update && apt-get install -y maven
+
+# 必要に応じて Jenkins ユーザーに戻す
+USER jenkins
